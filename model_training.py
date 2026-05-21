@@ -44,3 +44,4 @@ print(accuracy)
 joblib.dump(model, "model.pkl")
 
 print("\nModel saved successfully!")
+print("CI/CD Pipeline Triggered Successfully")
