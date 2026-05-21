@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  churn-api:
+
+    build: .
+
+    container_name: churn-container
+
+    ports:
+      - "8000:8000"
