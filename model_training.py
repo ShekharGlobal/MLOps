@@ -7,7 +7,7 @@ from preprocessing import preprocess_data
 
 
 # Load dataset
-df = load_data("D:/ML/data/customer_churn.csv")
+df = load_data("data/customer_churn.csv")
 
 
 # Preprocess dataset
