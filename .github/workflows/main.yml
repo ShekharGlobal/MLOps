@@ -1,10 +1,9 @@
-name: MLOps CI/CD Pipeline
+name: MLOps CI Pipeline
 
 on:
-
   push:
     branches:
-      - main
+      - master
 
 jobs:
 
@@ -25,14 +24,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-
           pip install pandas
           pip install scikit-learn
           pip install fastapi
           pip install uvicorn
           pip install joblib
 
-      - name: Run Training Script
+      - name: Run ML Training
         run: |
           python model_training.py
 
