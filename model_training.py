@@ -16,7 +16,7 @@ X_train, X_test, y_train, y_test = preprocess_data(df)
 
 # Create model
 model = RandomForestClassifier(
-    n_estimators=100,
+    n_estimators=200,
     random_state=42
 )
 
