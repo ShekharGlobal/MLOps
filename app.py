@@ -2,12 +2,12 @@ from fastapi import FastAPI
 import joblib
 import pandas as pd
 
+from prometheus_fastapi_instrumentator import Instrumentator
 
-# Create FastAPI app
+
 app = FastAPI()
 
-
-# Load trained model
+# Load ML model
 model = joblib.load("model.pkl")
 
 
@@ -22,12 +22,14 @@ def home():
 @app.post("/predict")
 def predict(data: dict):
 
-    # Convert input to dataframe
     df = pd.DataFrame([data])
 
-    # Prediction
     prediction = model.predict(df)
 
     return {
         "prediction": int(prediction[0])
     }
+
+
+# Prometheus Metrics
+Instrumentator().instrument(app).expose(app)
