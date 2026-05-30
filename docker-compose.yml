@@ -22,7 +22,7 @@ services:
     ports:
       - "3000:3000"
 
-      jenkins:
+  jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins
     ports:
