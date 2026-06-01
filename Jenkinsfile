@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 environment {
     IMAGE_NAME = "110044/mlops-churn-api"
     IMAGE_TAG  = "latest"
@@ -75,6 +74,5 @@ post {
         echo 'CI/CD Pipeline Failed'
     }
 }
-```
 
 }
